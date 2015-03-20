@@ -13,10 +13,3 @@ Install it with [Composer](https://getcomposer.org/):
     }
 }
 ```
-
-## Usage
-```php
-$source = new Mysql($pdo, 'SELECT * FROM `table`, function($row) {
-return new Metric($row['key'], $row['value']);
-});
-```
