@@ -1,6 +1,10 @@
 ---
 language: php
 
+addons:
+    code_climate:
+        repo_token: bc9ac36114b640b1cf136d7e275eddf5f4ceb21383009eb9af1e3d71bc1c0797
+
 php:
     - 5.4
     - 5.5
@@ -10,3 +14,6 @@ install:
     - composer install
 
 script: vendor/bin/phpspec run
+
+after_script:
+    - vendor/bin/test-reporter

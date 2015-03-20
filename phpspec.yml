@@ -2,5 +2,12 @@ suites:
     collector_suite:
         namespace: Kabischev\Collector
         psr4_prefix: Kabischev\Collector
+code_coverage:
+  format:
+    - html
+    - clover
+  output:
+    html: coverage
+    clover: build/logs/clover.xml
 extensions:
-#    - PhpSpec\Extension\CodeCoverageExtension
+    - PhpSpec\Extension\CodeCoverageExtension
