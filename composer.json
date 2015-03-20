@@ -1,0 +1,15 @@
+{
+  "name": "mkabischev/collector",
+  "autoload": {
+    "psr-4": {
+      "Kabischev\\Collector\\": "src/"
+    }
+  },
+  "require": {
+    "fzaninotto/Streamer": "dev-master"
+  },
+  "require-dev": {
+    "phpspec/phpspec": "~2.0",
+    "henrikbjorn/phpspec-code-coverage": "dev-master"
+  }
+}

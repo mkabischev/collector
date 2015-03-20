@@ -1,0 +1,6 @@
+suites:
+    collector_suite:
+        namespace: Kabischev\Collector
+        psr4_prefix: Kabischev\Collector
+extensions:
+#    - PhpSpec\Extension\CodeCoverageExtension
