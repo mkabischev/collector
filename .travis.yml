@@ -12,8 +12,9 @@ php:
 
 install:
     - composer install
+    - wget https://scrutinizer-ci.com/ocular.phar
 
 script: vendor/bin/phpspec run
 
 after_script:
-    - vendor/bin/test-reporter
+    - php ocular.phar code-coverage:upload --format=php-clover coverage/clover.xml

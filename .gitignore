@@ -2,5 +2,4 @@ composer.phar
 vendor/
 .idea
 coverage
-build/logs/clover.xml
 composer.lock
