@@ -4,7 +4,7 @@ namespace Kabischev\Collector\Source;
 
 use Kabischev\Collector\Metric;
 
-class Mysql implements SourceInterface
+class Database implements SourceInterface
 {
     /**
      * @var \PDO
@@ -38,7 +38,13 @@ class Mysql implements SourceInterface
      */
     public function getMetrics()
     {
-        // TODO: Implement getMetrics() method.
-    }
+        $metrics = [];
+        $callback = $this->callback;
+        $statement = $this->connection->prepare($this->query);
+        foreach ($statement->fetchAll(\PDO::FETCH_ASSOC) as $row) {
+            $metrics[] = $callback($row);
+        }
 
+        return $metrics;
+    }
 }
