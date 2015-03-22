@@ -1,15 +1,16 @@
 <?php
 
-namespace spec\Kabischev\Collector\Storage\Formatter;
+namespace spec\Kabischev\Collector\Storage\Stream\Formatter;
 
 use Kabischev\Collector\Metric;
 use PhpSpec\ObjectBehavior;
+use Streamer\Stream;
 
 class CarbonSpec extends ObjectBehavior
 {
     public function it_is_initializable()
     {
-        $this->shouldHaveType('Kabischev\Collector\Storage\Formatter\Carbon');
+        $this->shouldHaveType('Kabischev\Collector\Storage\Stream\Formatter\Carbon');
     }
 
     public function it_formats_metric(Metric $metric)

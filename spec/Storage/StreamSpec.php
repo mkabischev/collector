@@ -3,25 +3,36 @@
 namespace spec\Kabischev\Collector\Storage;
 
 use Kabischev\Collector\Metric;
-use Kabischev\Collector\Storage\Formatter\FormatterInterface;
+use Kabischev\Collector\Source\SourceInterface;
+use Kabischev\Collector\Storage\Stream\Formatter\FormatterInterface;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
 use Streamer\Stream;
 
-class StreamStorageSpec extends ObjectBehavior
+class StreamSpec extends ObjectBehavior
 {
     public function let(Stream $stream, FormatterInterface $formatter)
     {
         $this->beConstructedWith($stream, $formatter);
     }
 
-    public function it_is_initializable(Stream $stream)
+    public function it_is_initializable()
     {
-        $this->shouldHaveType('Kabischev\Collector\Storage\StreamStorage');
+        $this->shouldHaveType('Kabischev\Collector\Storage\Stream');
     }
 
-    public function it_stores_metrics(Stream $stream, FormatterInterface $formatter, Metric $metric1, Metric $metric2)
-    {
+    public function it_stores_metrics(
+        Stream $stream,
+        FormatterInterface $formatter,
+        SourceInterface $source,
+        Metric $metric1,
+        Metric $metric2
+    ) {
+        $source
+            ->getMetrics()
+            ->willReturn([$metric1, $metric2])
+            ->shouldBeCalled();
+
         $formatter
             ->format($metric1)
             ->willReturn('metric_1_formatted')
@@ -40,6 +51,6 @@ class StreamStorageSpec extends ObjectBehavior
             ->write('metric_2_formatted')
             ->shouldBeCalled();
 
-        $this->store([$metric1, $metric2]);
+        $this->store($source);
     }
 }

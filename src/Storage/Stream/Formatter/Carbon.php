@@ -1,6 +1,6 @@
 <?php
 
-namespace Kabischev\Collector\Storage\Formatter;
+namespace Kabischev\Collector\Storage\Stream\Formatter;
 
 use Kabischev\Collector\Metric;
 

@@ -2,12 +2,12 @@
 
 namespace Kabischev\Collector\Storage;
 
-use Kabischev\Collector\Metric;
+use Kabischev\Collector\Source\SourceInterface;
 
 interface StorageInterface
 {
-    /**ven
-     * @param Metric[] $metrics
+    /**
+     * @param SourceInterface $source
      */
-    public function store(array $metrics);
+    public function store(SourceInterface $source);
 }
