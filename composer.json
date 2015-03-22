@@ -1,5 +1,22 @@
 {
   "name": "mkabischev/collector",
+  "type": "library",
+  "description": "Metric collecting library",
+  "keywords": [
+    "metric",
+    "collect",
+    "carbon",
+    "graphite",
+    "influxdb"
+  ],
+  "homepage": "https://github.com/mkabischev/collector",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Mike Kabischev",
+      "role": "Developer"
+    }
+  ],
   "autoload": {
     "psr-4": {
       "Kabischev\\Collector\\": "src/"
