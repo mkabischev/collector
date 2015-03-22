@@ -30,7 +30,6 @@ Install it with [Composer](https://getcomposer.org/):
 use Kabischev\Collector\Source\Database;
 use Kabischev\Collector\Storage\Stream as StreamStorage;
 use Kabischev\Collector\Storage\Stream\Formatter\Carbon as CarbonFormatter;
-use Kabischev\Collector\Collector;
 use Streamer\NetworkStream;
 
 $source = new Database($pdo, 'SELECT `key`, `value` FROM `table`', function(array $row) {
@@ -38,7 +37,5 @@ $source = new Database($pdo, 'SELECT `key`, `value` FROM `table`', function(arra
 });
 
 $storage = new StreamStorage(NetworkStream::create('tcp://graphite.host:2003'), new CarbonFormatter());
-
-$collector = new Collector([$source], $storage);
-$collector->run();
+$storage->store($source);
 ```
