@@ -16,6 +16,7 @@ Install it with [Composer](https://getcomposer.org/):
 
 ### Sources
  - [x] _Database_
+ - [x] _Array_
  - [ ] _Pinba_ 
  - [ ] _AWS CloudWatch_
  - [ ] _RabbitMQ_
