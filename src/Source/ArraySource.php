@@ -25,7 +25,7 @@ class ArraySource implements SourceInterface
     public function getMetrics()
     {
         return array_map(function(array $item) {
-            return new Metric($item['name'], $item['value']);
+            return new Metric($item['name'], $item['value'], $item['meta']);
         }, $this->data);
     }
 }

@@ -18,15 +18,18 @@ class ArraySourceSpec extends ObjectBehavior
         $this->beConstructedWith([
             [
                 'name' => 'foo.metric_1',
-                'value' => 100
+                'value' => 100,
+                'meta' => ['time' => 100],
             ],
             [
                 'name' => 'foo.metric_2',
-                'value' => 200
+                'value' => 200,
+                'meta' => ['time' => 200],
             ],
             [
                 'name' => 'foo.metric_3',
-                'value' => 300
+                'value' => 300,
+                'meta' => ['time' => 300]
             ],
         ]);
 

@@ -18,7 +18,7 @@ class DatabaseSpec extends ObjectBehavior
     public function it_returns_metrics(\PDO $pdo, \PDOStatement $statement)
     {
         $this->beConstructedWith($pdo, 'SELECT * FROM `table`', function (array $row) {
-            return new Metric($row['key'], $row['value'], $row['time']);
+            return new Metric($row['key'], $row['value'], ['time' => $row['time']]);
         });
 
         $pdo

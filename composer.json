@@ -23,7 +23,8 @@
     }
   },
   "require": {
-    "fzaninotto/Streamer": "dev-master"
+    "fzaninotto/Streamer": "dev-master",
+    "crodas/influx-php": "*"
   },
   "require-dev": {
     "phpspec/phpspec": "~2.0",

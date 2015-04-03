@@ -4,8 +4,41 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e04aee406066cfc87a625e469510edf0",
+    "hash": "3eaf9385d362eb0fd2cf642bbaf087bc",
     "packages": [
+        {
+            "name": "crodas/influx-php",
+            "version": "v0.9.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/crodas/InfluxPHP.git",
+                "reference": "e3cdc8e057cbc5b6df6dc1adf66f9932d40ed52f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/crodas/InfluxPHP/zipball/e3cdc8e057cbc5b6df6dc1adf66f9932d40ed52f",
+                "reference": "e3cdc8e057cbc5b6df6dc1adf66f9932d40ed52f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "lib/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-4-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "César D. Rodas",
+                    "email": "crodas@php.net"
+                }
+            ],
+            "description": "Simple client for InfluxDB",
+            "time": "2015-03-31 18:19:24"
+        },
         {
             "name": "fzaninotto/streamer",
             "version": "dev-master",
@@ -44,64 +77,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "codeclimate/php-test-reporter",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/codeclimate/php-test-reporter.git",
-                "reference": "cbcaec19e8e259027cba8c3c8d2a3f75ed33d931"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/codeclimate/php-test-reporter/zipball/cbcaec19e8e259027cba8c3c8d2a3f75ed33d931",
-                "reference": "cbcaec19e8e259027cba8c3c8d2a3f75ed33d931",
-                "shasum": ""
-            },
-            "require": {
-                "ext-curl": "*",
-                "php": ">=5.3",
-                "satooshi/php-coveralls": "0.6.*",
-                "symfony/console": ">=2.0"
-            },
-            "require-dev": {
-                "ext-xdebug": "*",
-                "phpunit/phpunit": "3.7.*@stable"
-            },
-            "bin": [
-                "composer/bin/test-reporter"
-            ],
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "CodeClimate\\Component": "src/",
-                    "CodeClimate\\Bundle": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Code Climate",
-                    "email": "hello@codeclimate.com",
-                    "homepage": "https://codeclimate.com"
-                }
-            ],
-            "description": "PHP client for reporting test coverage to Code Climate",
-            "homepage": "https://github.com/codeclimate/php-test-reporter",
-            "keywords": [
-                "codeclimate",
-                "coverage"
-            ],
-            "time": "2015-03-16 18:41:08"
-        },
         {
             "name": "doctrine/instantiator",
             "version": "1.0.4",
@@ -1442,8 +1417,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "fzaninotto/streamer": 20,
-        "henrikbjorn/phpspec-code-coverage": 20,
-        "codeclimate/php-test-reporter": 20
+        "henrikbjorn/phpspec-code-coverage": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
