@@ -16,6 +16,11 @@ class Composite implements SourceInterface
      */
     public function __construct(array $sources)
     {
+        foreach ($sources as $source) {
+            if (!$source instanceof SourceInterface) {
+                throw new \InvalidArgumentException();
+            }
+        }
         $this->sources = $sources;
     }
 
